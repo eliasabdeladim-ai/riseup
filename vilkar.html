@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vilkår for bruk — RiseUp</title>
+<style>
+/* Stilen til RiseUps to juridiske sider.
+ *
+ * Ingen skrifter, bilder eller skript hentes utenfra. En personvernerklæring
+ * som laster noe fra et annet selskap, sporer leseren i det øyeblikket hun
+ * leser at hun ikke blir sporet.
+ *
+ * Fargene er appens egne, hentet fra expo/src/theme.js. */
+
+:root {
+  --side: #131618;
+  --kort: #1e262b;
+  --tekst: #eef0f1;
+  --myk: #cdd2d6;
+  --dempet: #9aa5ac;
+  --svak: #8f9ba3;
+  --gronn: #6bdc2e;
+  --kant: rgba(255, 255, 255, .07);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 20px 80px;
+  background: var(--side);
+  color: var(--myk);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+main { max-width: 680px; margin: 0 auto; }
+
+header {
+  padding: 56px 0 12px;
+  border-bottom: 1px solid var(--kant);
+  margin-bottom: 36px;
+}
+
+.merke {
+  font-size: 13px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gronn);
+  font-weight: 800;
+  margin: 0 0 10px;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 1.15;
+  color: var(--tekst);
+  margin: 0 0 10px;
+  letter-spacing: -.01em;
+}
+
+.datert { color: var(--svak); font-size: 14px; margin: 0 0 22px; }
+
+h2 {
+  font-size: 21px;
+  color: var(--tekst);
+  margin: 44px 0 12px;
+  letter-spacing: -.005em;
+}
+
+h3 {
+  font-size: 16px;
+  color: var(--tekst);
+  margin: 26px 0 6px;
+}
+
+p { margin: 0 0 16px; }
+ul { margin: 0 0 16px; padding-left: 22px; }
+li { margin-bottom: 8px; }
+
+strong { color: var(--tekst); font-weight: 700; }
+
+a { color: var(--gronn); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Rammen rundt det viktigste. Brukt sparsomt: tre bokser på en side er ingen
+   framheving, det er bare flere bakgrunnsfarger. */
+.boks {
+  background: var(--kort);
+  border: 1px solid var(--kant);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin: 0 0 20px;
+}
+.boks p:last-child { margin-bottom: 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 20px;
+  font-size: 15px;
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 11px 12px 11px 0;
+  border-bottom: 1px solid var(--kant);
+}
+th { color: var(--tekst); font-weight: 700; }
+
+/* Språkbryteren. To språk, så to lenker holder. */
+.spraak {
+  display: flex;
+  gap: 6px;
+  background: var(--kort);
+  border: 1px solid var(--kant);
+  border-radius: 999px;
+  padding: 4px;
+  width: fit-content;
+  margin: 0 0 30px;
+}
+.spraak button {
+  border: 0;
+  background: transparent;
+  color: var(--svak);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.spraak button[aria-pressed="true"] { background: #263138; color: var(--tekst); }
+
+footer {
+  margin-top: 56px;
+  padding-top: 22px;
+  border-top: 1px solid var(--kant);
+  color: var(--svak);
+  font-size: 14px;
+}
+
+[lang]:not([lang="x"]) { display: none; }
+body.no [lang="no"] { display: revert; }
+body.en [lang="en"] { display: revert; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 28px; }
+  body { font-size: 16px; }
+}
+</style>
+</head>
+<body class="no">
+<main>
+
+<header>
+  <p class="merke">RiseUp</p>
+  <h1 lang="no">Vilkår for bruk</h1>
+  <h1 lang="en">Terms of Use</h1>
+  <p class="datert" lang="no">Sist oppdatert 19. oktober 2026</p>
+  <p class="datert" lang="en">Last updated 19 October 2026</p>
+</header>
+
+<div class="spraak">
+  <button type="button" data-spraak="no" aria-pressed="true">NO</button>
+  <button type="button" data-spraak="en" aria-pressed="false">EN</button>
+</div>
+
+<!-- ============================== NORSK ============================== -->
+<div lang="no">
+
+<p>Disse vilkårene gjelder mellom deg og Elias Abdeladim, Norge, som utgir RiseUp. Ved å bruke appen godtar du dem.</p>
+
+<h2>Hva RiseUp er</h2>
+
+<p>RiseUp er en vekkerklokke uten av-knapp. Alarmen ringer, du snurrer hjulene og får en gjenstand, du finner den og tar et bilde, og først da stopper lyden.</p>
+
+<p>Det er dette som er produktet. Du kan ikke slumre, og du kan ikke skru den av uten å fullføre oppdraget. Det er ikke en feil.</p>
+
+<div class="boks">
+  <p><strong>Les dette før du stoler på den.</strong> RiseUp er ikke et medisinsk hjelpemiddel, og ikke egnet som eneste alarm der det får alvorlige følger å forsove seg. Appen avhenger av at telefonen er på, har strøm, har nett om morgenen, og av at iOS lar alarmen gå. Ingen av delene kan vi garantere. Har du en flyavgang, en eksamen eller en vakt du ikke kan miste, sett en alarm til.</p>
+</div>
+
+<h2>Abonnementet</h2>
+
+<p>RiseUp krever et abonnement. Du velger mellom ett år og én uke, og prisen står på skjermen før du kjøper. Det er ingen gratis prøveperiode.</p>
+
+<ul>
+  <li>Betalingen trekkes fra Apple-ID-en din når du bekrefter kjøpet.</li>
+  <li>Abonnementet fornyes automatisk med samme periode, med mindre du sier opp senest 24 timer før perioden er ute.</li>
+  <li>Fornyelsen trekkes innen 24 timer før hver ny periode begynner.</li>
+  <li>Du sier opp i iOS: Innstillinger, trykk på navnet ditt, så Abonnementer. Det kan ikke gjøres inne i RiseUp, fordi Apple styrer det.</li>
+  <li>Sier du opp, beholder du tilgangen ut perioden du har betalt for.</li>
+</ul>
+
+<p>Alle kjøp går gjennom Apple. Vi får aldri se kortet ditt, og vi kan ikke refundere på egen hånd. Vil du ha pengene tilbake, går det gjennom Apple på <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>, og Apple avgjør.</p>
+
+<p>Vi kan endre prisen. Endringen gjelder nye perioder, og du får varsel fra Apple på forhånd slik Apples regler krever. Vil du ikke betale den nye prisen, sier du opp.</p>
+
+<h2>Hva du har lov til</h2>
+
+<p>Du får en personlig, ikke-eksklusiv rett til å bruke RiseUp på enheter du eier eller kontrollerer, så lenge abonnementet er aktivt.</p>
+
+<p>Du skal ikke selge, leie ut eller videreformidle tilgangen, forsøke å hente ut kildekoden, eller omgå betalingen.</p>
+
+<p>Appen, navnet, figuren, lydene og bildene tilhører oss. Bildet du tar om morgenen tilhører deg, og det lagres ikke noe sted. Se <a href="personvern.html">personvernerklæringen</a>.</p>
+
+<h2>Bildegjenkjenningen</h2>
+
+<p>Bildet vurderes av en kunstig intelligens, og den tar feil noen ganger. Den kan avvise riktig gjenstand, og den kan godkjenne noe den ikke burde. Blir bildet avvist, kan du ta et nytt.</p>
+
+<p>Svarer serveren ikke i det hele tatt, godkjennes bildet uten vurdering, slik at du ikke blir låst inne i en alarm som ikke kan stoppes. Det betyr at oppdraget kan omgås ved å skru av nettet. Det er en bevisst avveining: at alarmen alltid skal kunne stoppes veier tyngre enn at ingen skal kunne jukse.</p>
+
+<h2>Ansvar</h2>
+
+<p>Appen leveres som den er. Vi lover ikke at den alltid er tilgjengelig, feilfri eller at alarmen alltid går.</p>
+
+<p>Så langt loven tillater, er vi ikke ansvarlige for indirekte tap, som tapt arbeidsfortjeneste, forsovelser eller tapte avtaler. Der ansvar likevel følger av ufravikelig lov, er det begrenset til det du har betalt for abonnementet de siste tolv månedene.</p>
+
+<p>Ingenting her begrenser rettighetene du har som forbruker etter norsk rett.</p>
+
+<h2>Oppsigelse</h2>
+
+<p>Du kan slutte når du vil ved å si opp abonnementet og slette appen. Vi kan stenge tilgangen ved brudd på disse vilkårene.</p>
+
+<h2>Lovvalg</h2>
+
+<p>Norsk rett gjelder. Tvister hører hjemme ved norske domstoler, med Oslo tingrett som verneting, om ikke ufravikelige regler sier noe annet.</p>
+
+<h2>Apple</h2>
+
+<p>Apple er ikke part i denne avtalen og har intet ansvar for RiseUp. Apple har ingen plikt til å yte støtte. Ved spørsmål, skriv til oss på <a href="mailto:riseup.supportmail@gmail.com">riseup.supportmail@gmail.com</a>.</p>
+
+<h2>Kontakt</h2>
+
+<p>Elias Abdeladim, Norge. <a href="mailto:riseup.supportmail@gmail.com">riseup.supportmail@gmail.com</a></p>
+
+</div>
+
+<!-- ============================== ENGLISH ============================ -->
+<div lang="en">
+
+<p>These terms are an agreement between you and Elias Abdeladim, Norway, the publisher of RiseUp. By using the app you accept them.</p>
+
+<h2>What RiseUp is</h2>
+
+<p>RiseUp is an alarm clock with no off button. The alarm rings, you spin the reels and get an object, you find it and take a photo, and only then does the sound stop.</p>
+
+<p>That is the product. You cannot snooze, and you cannot switch it off without completing the task. This is not a defect.</p>
+
+<div class="boks">
+  <p><strong>Read this before relying on it.</strong> RiseUp is not a medical device and is not suitable as your only alarm where oversleeping has serious consequences. The app depends on your phone being on, charged, online in the morning, and on iOS letting the alarm ring. We cannot guarantee any of those. If you have a flight, an exam or a shift you cannot miss, set a second alarm.</p>
+</div>
+
+<h2>The subscription</h2>
+
+<p>RiseUp requires a subscription. You choose between one year and one week, and the price is shown on screen before you buy. There is no free trial.</p>
+
+<ul>
+  <li>Payment is charged to your Apple ID when you confirm the purchase.</li>
+  <li>The subscription renews automatically for the same period unless you cancel at least 24 hours before the period ends.</li>
+  <li>Renewal is charged within 24 hours before each new period begins.</li>
+  <li>You cancel in iOS: Settings, tap your name, then Subscriptions. It cannot be done inside RiseUp, because Apple controls it.</li>
+  <li>If you cancel, you keep access until the end of the period you paid for.</li>
+</ul>
+
+<p>All purchases go through Apple. We never see your card, and we cannot issue refunds ourselves. For a refund, go to Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>, and Apple decides.</p>
+
+<p>We may change the price. A change applies to new periods, and Apple notifies you in advance as its rules require. If you do not want to pay the new price, cancel.</p>
+
+<h2>What you may do</h2>
+
+<p>You get a personal, non-exclusive right to use RiseUp on devices you own or control, for as long as the subscription is active.</p>
+
+<p>You must not sell, rent or pass on access, attempt to extract the source code, or circumvent payment.</p>
+
+<p>The app, the name, the character, the sounds and the images belong to us. The photo you take in the morning belongs to you, and it is not stored anywhere. See the <a href="personvern.html">privacy policy</a>.</p>
+
+<h2>The image recognition</h2>
+
+<p>The photo is judged by an artificial intelligence, and it is sometimes wrong. It can reject the right object, and it can approve something it should not. If the photo is rejected, you can take another.</p>
+
+<p>If the server does not answer at all, the photo is approved without judgement, so that you are not locked inside an alarm that cannot be stopped. That means the task can be bypassed by turning off the network. It is a deliberate trade-off: being able to stop the alarm always matters more than nobody being able to cheat.</p>
+
+<h2>Liability</h2>
+
+<p>The app is provided as is. We do not promise that it is always available, free of defects, or that the alarm will always ring.</p>
+
+<p>To the extent permitted by law, we are not liable for indirect losses such as lost earnings, oversleeping or missed appointments. Where liability nevertheless follows from mandatory law, it is limited to what you have paid for the subscription during the last twelve months.</p>
+
+<p>Nothing here limits the rights you have as a consumer under Norwegian law.</p>
+
+<h2>Termination</h2>
+
+<p>You can stop whenever you want by cancelling the subscription and deleting the app. We may withdraw access if you breach these terms.</p>
+
+<h2>Governing law</h2>
+
+<p>Norwegian law applies. Disputes belong before the Norwegian courts, with Oslo District Court as the venue, unless mandatory rules say otherwise.</p>
+
+<h2>Apple</h2>
+
+<p>Apple is not a party to this agreement and has no responsibility for RiseUp. Apple has no obligation to provide support. For questions, write to us at <a href="mailto:riseup.supportmail@gmail.com">riseup.supportmail@gmail.com</a>.</p>
+
+<h2>Contact</h2>
+
+<p>Elias Abdeladim, Norway. <a href="mailto:riseup.supportmail@gmail.com">riseup.supportmail@gmail.com</a></p>
+
+</div>
+
+<footer>
+  <p lang="no">RiseUp · <a href="personvern.html">Personvernerklæring</a></p>
+  <p lang="en">RiseUp · <a href="personvern.html">Privacy Policy</a></p>
+</footer>
+
+</main>
+
+<script>
+document.querySelectorAll('.spraak button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var s = b.dataset.spraak;
+    document.body.className = s;
+    document.documentElement.lang = s;
+    document.querySelectorAll('.spraak button').forEach(function (x) {
+      x.setAttribute('aria-pressed', String(x === b));
+    });
+  });
+});
+if (!navigator.language || navigator.language.slice(0, 2) !== 'no') {
+  document.querySelector('.spraak button[data-spraak="en"]').click();
+}
+</script>
+
+</body>
+</html>

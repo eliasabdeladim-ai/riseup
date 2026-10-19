@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personvernerklæring — RiseUp</title>
+<style>
+/* Stilen til RiseUps to juridiske sider.
+ *
+ * Ingen skrifter, bilder eller skript hentes utenfra. En personvernerklæring
+ * som laster noe fra et annet selskap, sporer leseren i det øyeblikket hun
+ * leser at hun ikke blir sporet.
+ *
+ * Fargene er appens egne, hentet fra expo/src/theme.js. */
+
+:root {
+  --side: #131618;
+  --kort: #1e262b;
+  --tekst: #eef0f1;
+  --myk: #cdd2d6;
+  --dempet: #9aa5ac;
+  --svak: #8f9ba3;
+  --gronn: #6bdc2e;
+  --kant: rgba(255, 255, 255, .07);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 20px 80px;
+  background: var(--side);
+  color: var(--myk);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+main { max-width: 680px; margin: 0 auto; }
+
+header {
+  padding: 56px 0 12px;
+  border-bottom: 1px solid var(--kant);
+  margin-bottom: 36px;
+}
+
+.merke {
+  font-size: 13px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gronn);
+  font-weight: 800;
+  margin: 0 0 10px;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 1.15;
+  color: var(--tekst);
+  margin: 0 0 10px;
+  letter-spacing: -.01em;
+}
+
+.datert { color: var(--svak); font-size: 14px; margin: 0 0 22px; }
+
+h2 {
+  font-size: 21px;
+  color: var(--tekst);
+  margin: 44px 0 12px;
+  letter-spacing: -.005em;
+}
+
+h3 {
+  font-size: 16px;
+  color: var(--tekst);
+  margin: 26px 0 6px;
+}
+
+p { margin: 0 0 16px; }
+ul { margin: 0 0 16px; padding-left: 22px; }
+li { margin-bottom: 8px; }
+
+strong { color: var(--tekst); font-weight: 700; }
+
+a { color: var(--gronn); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Rammen rundt det viktigste. Brukt sparsomt: tre bokser på en side er ingen
+   framheving, det er bare flere bakgrunnsfarger. */
+.boks {
+  background: var(--kort);
+  border: 1px solid var(--kant);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin: 0 0 20px;
+}
+.boks p:last-child { margin-bottom: 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 20px;
+  font-size: 15px;
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 11px 12px 11px 0;
+  border-bottom: 1px solid var(--kant);
+}
+th { color: var(--tekst); font-weight: 700; }
+
+/* Språkbryteren. To språk, så to lenker holder. */
+.spraak {
+  display: flex;
+  gap: 6px;
+  background: var(--kort);
+  border: 1px solid var(--kant);
+  border-radius: 999px;
+  padding: 4px;
+  width: fit-content;
+  margin: 0 0 30px;
+}
+.spraak button {
+  border: 0;
+  background: transparent;
+  color: var(--svak);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.spraak button[aria-pressed="true"] { background: #263138; color: var(--tekst); }
+
+footer {
+  margin-top: 56px;
+  padding-top: 22px;
+  border-top: 1px solid var(--kant);
+  color: var(--svak);
+  font-size: 14px;
+}
+
+[lang]:not([lang="x"]) { display: none; }
+body.no [lang="no"] { display: revert; }
+body.en [lang="en"] { display: revert; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 28px; }
+  body { font-size: 16px; }
+}
+</style>
+</head>
+<body class="no">
+<main>
+
+<header>
+  <p class="merke">RiseUp</p>
+  <h1 lang="no">Personvernerklæring</h1>
+  <h1 lang="en">Privacy Policy</h1>
+  <p class="datert" lang="no">Sist oppdatert 19. oktober 2026</p>
+  <p class="datert" lang="en">Last updated 19 October 2026</p>
+</header>
+
+<div class="spraak">
+  <button type="button" data-spraak="no" aria-pressed="true">NO</button>
+  <button type="button" data-spraak="en" aria-pressed="false">EN</button>
+</div>
+
+<!-- ============================== NORSK ============================== -->
+<div lang="no">
+
+<div class="boks">
+  <p><strong>Kort fortalt:</strong> RiseUp har ingen innlogging og spør deg aldri om navn, e-post eller telefonnummer. Bildet du tar om morgenen sendes til Google for å avgjøre om riktig gjenstand er på det, og slettes så snart svaret er gitt. Vi lagrer aldri bilder.</p>
+</div>
+
+<p>RiseUp er en vekkerklokke uten av-knapp. Når alarmen ringer, trekker appen en gjenstand du har hjemme, og alarmen stopper først når du har fotografert den.</p>
+
+<p>Denne erklæringen forklarer hva appen samler inn, hvorfor, og hvem som får se det.</p>
+
+<h2>Hvem som er ansvarlig</h2>
+
+<p>Behandlingsansvarlig er Elias Abdeladim, Norge. Spørsmål om personvern, eller ønske om å få slettet dataene dine, sendes til <a href="mailto:riseup.supportmail@gmail.com">riseup.supportmail@gmail.com</a>.</p>
+
+<h2>Du har ingen konto</h2>
+
+<p>RiseUp har ingen registrering og ingen innlogging. Første gang du åpner appen, opprettes en anonym bruker som bare er et tilfeldig tall. Det tallet er ikke knyttet til deg, og vi kan ikke bruke det til å finne ut hvem du er.</p>
+
+<p>Dette har en bakside du bør kjenne til: sletter du appen, forsvinner nøkkelen til den anonyme brukeren, og en ny installasjon starter på nytt. Streaken og historikken din blir da liggende igjen uten at noen, heller ikke vi, kan nå dem.</p>
+
+<h2>Bildet du tar</h2>
+
+<p>For å stoppe alarmen må du fotografere en gjenstand. Bildet sendes kryptert til vår server, som sender det videre til Google Gemini for å avgjøre om gjenstanden er på bildet. Svaret er fire opplysninger: om det ble godkjent, hva som ble gjenkjent, hvor sikker vurderingen er, og en kort begrunnelse.</p>
+
+<p><strong>Bildet lagres ingen steder.</strong> Det ligger i minnet mens vurderingen pågår, og forsvinner når svaret er sendt tilbake til telefonen. Det skrives ikke til noen database og ikke til noen fil. Google behandler bildet etter sine egne vilkår for utviklere, og bruker det ikke til å trene modellene sine.</p>
+
+<p>Kameraet brukes bare i dette ene øyeblikket. Appen har ingen tilgang til bildegalleriet ditt.</p>
+
+<h2>Hva som faktisk lagres</h2>
+
+<table>
+  <tr><th>Hva</th><th>Hvorfor</th><th>Hvor</th></tr>
+  <tr>
+    <td>Svarene dine fra onboardingen</td>
+    <td>For å forstå hvem appen er for og gjøre spørsmålene bedre</td>
+    <td>Supabase (EU)</td>
+  </tr>
+  <tr>
+    <td>Én rad per morgen: hvilken gjenstand, hvor lang tid du brukte, og om vurderingen måtte hoppes over</td>
+    <td>Streaken og historikken din, og for å se om appen virker</td>
+    <td>Supabase (EU)</td>
+  </tr>
+  <tr>
+    <td>Hendelser som «alarmen gikk», «bildet ble tatt», «paywallen ble vist»</td>
+    <td>For å se hvor folk faller av, uten å lese noe om den enkelte</td>
+    <td>Amplitude</td>
+  </tr>
+  <tr>
+    <td>Om du har et aktivt abonnement</td>
+    <td>For å gi deg tilgangen du har betalt for</td>
+    <td>Adapty og Apple</td>
+  </tr>
+  <tr>
+    <td>Alarmtider, ukeplan, valgt lyd og gjenstander</td>
+    <td>For at appen skal virke</td>
+    <td>Bare på telefonen din</td>
+  </tr>
+</table>
+
+<p>Alt dette er knyttet til det anonyme tallet, ikke til deg. Vi ber Amplitude om å la være å lagre IP-adressen din.</p>
+
+<h2>Hvem andre som er involvert</h2>
+
+<p>Vi selger ikke data, og vi deler dem ikke med annonsører. Appen har ingen annonser. Disse selskapene behandler data på våre vegne, hver for en bestemt oppgave:</p>
+
+<ul>
+  <li><strong>Supabase</strong> lagrer den anonyme brukeren, onboarding-svarene og morgenene. Servere i EU.</li>
+  <li><strong>Google (Gemini)</strong> vurderer bildet. Bildet lagres ikke.</li>
+  <li><strong>Amplitude</strong> teller hendelser slik at vi ser hvor folk faller av.</li>
+  <li><strong>Adapty</strong> holder orden på abonnementet sammen med Apple.</li>
+  <li><strong>Apple</strong> håndterer selve betalingen. Vi ser aldri kortet ditt.</li>
+</ul>
+
+<p>Noen av disse ligger utenfor EØS. Overføringen skjer på EU-kommisjonens standard personvernbestemmelser.</p>
+
+<h2>Hvor lenge</h2>
+
+<p>Onboarding-svarene og morgenene blir liggende så lenge den anonyme brukeren finnes. Ber du om sletting, fjernes alt innen 30 dager. Hendelsene i Amplitude slettes automatisk etter 24 måneder.</p>
+
+<h2>Rettighetene dine</h2>
+
+<p>Du kan be om innsyn i det som er lagret, retting, sletting eller en kopi i maskinlesbart format. Send en e-post til <a href="mailto:riseup.supportmail@gmail.com">riseup.supportmail@gmail.com</a>.</p>
+
+<p>Siden kontoen er anonym, kan vi ikke finne dataene dine ut fra e-postadressen alene. Du finner din egen bruker-id i appen under Innstillinger, og den må være med i henvendelsen. Uten den vet vi ikke hvilke rader som er dine, og vi vil ikke gjette.</p>
+
+<p>Mener du vi behandler data feil, kan du klage til <a href="https://www.datatilsynet.no">Datatilsynet</a>.</p>
+
+<h2>Barn</h2>
+
+<p>RiseUp er ikke laget for barn under 13 år, og vi samler ikke bevisst inn data om dem.</p>
+
+<h2>Endringer</h2>
+
+<p>Blir denne erklæringen endret, oppdateres datoen øverst. Er endringen vesentlig, sier appen fra.</p>
+
+</div>
+
+<!-- ============================== ENGLISH ============================ -->
+<div lang="en">
+
+<div class="boks">
+  <p><strong>In short:</strong> RiseUp has no sign-in and never asks for your name, email or phone number. The photo you take in the morning is sent to Google to decide whether the right object is in it, and is discarded as soon as the answer comes back. We never store photos.</p>
+</div>
+
+<p>RiseUp is an alarm clock with no off button. When the alarm rings, the app picks an object you have at home, and the alarm only stops once you have photographed it.</p>
+
+<p>This policy explains what the app collects, why, and who gets to see it.</p>
+
+<h2>Who is responsible</h2>
+
+<p>The data controller is Elias Abdeladim, Norway. For privacy questions, or to have your data deleted, write to <a href="mailto:riseup.supportmail@gmail.com">riseup.supportmail@gmail.com</a>.</p>
+
+<h2>You do not have an account</h2>
+
+<p>RiseUp has no registration and no sign-in. The first time you open the app, an anonymous user is created that is nothing more than a random number. That number is not tied to you, and we cannot use it to work out who you are.</p>
+
+<p>There is a downside you should know about: if you delete the app, the key to that anonymous user is gone, and a fresh install starts over. Your streak and history stay behind, and nobody, including us, can reach them.</p>
+
+<h2>The photo you take</h2>
+
+<p>To stop the alarm you have to photograph an object. The photo is sent encrypted to our server, which forwards it to Google Gemini to decide whether the object is in the picture. The answer is four pieces of information: whether it was approved, what was recognised, how confident the judgement is, and a short reason.</p>
+
+<p><strong>The photo is not stored anywhere.</strong> It exists in memory while the judgement is running and is gone once the answer is sent back to your phone. It is not written to any database and not to any file. Google processes the photo under its own developer terms and does not use it to train its models.</p>
+
+<p>The camera is used only in that one moment. The app has no access to your photo library.</p>
+
+<h2>What is actually stored</h2>
+
+<table>
+  <tr><th>What</th><th>Why</th><th>Where</th></tr>
+  <tr>
+    <td>Your onboarding answers</td>
+    <td>To understand who the app is for and make the questions better</td>
+    <td>Supabase (EU)</td>
+  </tr>
+  <tr>
+    <td>One row per morning: which object, how long you took, and whether the judgement had to be skipped</td>
+    <td>Your streak and history, and to see whether the app works</td>
+    <td>Supabase (EU)</td>
+  </tr>
+  <tr>
+    <td>Events such as "the alarm rang", "the photo was taken", "the paywall was shown"</td>
+    <td>To see where people drop off, without reading anything about an individual</td>
+    <td>Amplitude</td>
+  </tr>
+  <tr>
+    <td>Whether you have an active subscription</td>
+    <td>To give you the access you paid for</td>
+    <td>Adapty and Apple</td>
+  </tr>
+  <tr>
+    <td>Alarm times, weekly plan, chosen sound and objects</td>
+    <td>So the app works</td>
+    <td>On your phone only</td>
+  </tr>
+</table>
+
+<p>All of this is tied to the anonymous number, not to you. We ask Amplitude not to store your IP address.</p>
+
+<h2>Who else is involved</h2>
+
+<p>We do not sell data and we do not share it with advertisers. The app carries no ads. These companies process data on our behalf, each for one specific job:</p>
+
+<ul>
+  <li><strong>Supabase</strong> stores the anonymous user, the onboarding answers and the mornings. Servers in the EU.</li>
+  <li><strong>Google (Gemini)</strong> judges the photo. The photo is not stored.</li>
+  <li><strong>Amplitude</strong> counts events so we can see where people drop off.</li>
+  <li><strong>Adapty</strong> keeps track of the subscription together with Apple.</li>
+  <li><strong>Apple</strong> handles the payment itself. We never see your card.</li>
+</ul>
+
+<p>Some of these are outside the EEA. Transfers rely on the European Commission's Standard Contractual Clauses.</p>
+
+<h2>How long</h2>
+
+<p>The onboarding answers and the mornings stay for as long as the anonymous user exists. If you ask for deletion, everything is removed within 30 days. Events in Amplitude are deleted automatically after 24 months.</p>
+
+<h2>Your rights</h2>
+
+<p>You can ask for access to what is stored, for correction, deletion, or a copy in a machine-readable format. Write to <a href="mailto:riseup.supportmail@gmail.com">riseup.supportmail@gmail.com</a>.</p>
+
+<p>Because the account is anonymous, we cannot find your data from your email address alone. You will find your own user id in the app under Settings, and it has to be included in your request. Without it we do not know which rows are yours, and we will not guess.</p>
+
+<p>If you believe we handle data wrongly, you can complain to the Norwegian Data Protection Authority, <a href="https://www.datatilsynet.no">Datatilsynet</a>.</p>
+
+<h2>Children</h2>
+
+<p>RiseUp is not made for children under 13, and we do not knowingly collect data about them.</p>
+
+<h2>Changes</h2>
+
+<p>If this policy changes, the date at the top is updated. If the change is significant, the app will tell you.</p>
+
+</div>
+
+<footer>
+  <p lang="no">RiseUp · <a href="vilkar.html">Vilkår for bruk</a></p>
+  <p lang="en">RiseUp · <a href="vilkar.html">Terms of Use</a></p>
+</footer>
+
+</main>
+
+<script>
+/* Språkvalget. Ingen rammeverk, ingen sporing, ett tastetrykk. */
+document.querySelectorAll('.spraak button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var s = b.dataset.spraak;
+    document.body.className = s;
+    document.documentElement.lang = s;
+    document.querySelectorAll('.spraak button').forEach(function (x) {
+      x.setAttribute('aria-pressed', String(x === b));
+    });
+  });
+});
+/* Snakker nettleseren engelsk, vis engelsk først. Apple leser den engelske. */
+if (!navigator.language || navigator.language.slice(0, 2) !== 'no') {
+  document.querySelector('.spraak button[data-spraak="en"]').click();
+}
+</script>
+
+</body>
+</html>

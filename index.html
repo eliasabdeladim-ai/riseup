@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RiseUp — støtte</title>
+<style>
+/* Stilen til RiseUps to juridiske sider.
+ *
+ * Ingen skrifter, bilder eller skript hentes utenfra. En personvernerklæring
+ * som laster noe fra et annet selskap, sporer leseren i det øyeblikket hun
+ * leser at hun ikke blir sporet.
+ *
+ * Fargene er appens egne, hentet fra expo/src/theme.js. */
+
+:root {
+  --side: #131618;
+  --kort: #1e262b;
+  --tekst: #eef0f1;
+  --myk: #cdd2d6;
+  --dempet: #9aa5ac;
+  --svak: #8f9ba3;
+  --gronn: #6bdc2e;
+  --kant: rgba(255, 255, 255, .07);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 20px 80px;
+  background: var(--side);
+  color: var(--myk);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+main { max-width: 680px; margin: 0 auto; }
+
+header {
+  padding: 56px 0 12px;
+  border-bottom: 1px solid var(--kant);
+  margin-bottom: 36px;
+}
+
+.merke {
+  font-size: 13px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gronn);
+  font-weight: 800;
+  margin: 0 0 10px;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 1.15;
+  color: var(--tekst);
+  margin: 0 0 10px;
+  letter-spacing: -.01em;
+}
+
+.datert { color: var(--svak); font-size: 14px; margin: 0 0 22px; }
+
+h2 {
+  font-size: 21px;
+  color: var(--tekst);
+  margin: 44px 0 12px;
+  letter-spacing: -.005em;
+}
+
+h3 {
+  font-size: 16px;
+  color: var(--tekst);
+  margin: 26px 0 6px;
+}
+
+p { margin: 0 0 16px; }
+ul { margin: 0 0 16px; padding-left: 22px; }
+li { margin-bottom: 8px; }
+
+strong { color: var(--tekst); font-weight: 700; }
+
+a { color: var(--gronn); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Rammen rundt det viktigste. Brukt sparsomt: tre bokser på en side er ingen
+   framheving, det er bare flere bakgrunnsfarger. */
+.boks {
+  background: var(--kort);
+  border: 1px solid var(--kant);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin: 0 0 20px;
+}
+.boks p:last-child { margin-bottom: 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 20px;
+  font-size: 15px;
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 11px 12px 11px 0;
+  border-bottom: 1px solid var(--kant);
+}
+th { color: var(--tekst); font-weight: 700; }
+
+/* Språkbryteren. To språk, så to lenker holder. */
+.spraak {
+  display: flex;
+  gap: 6px;
+  background: var(--kort);
+  border: 1px solid var(--kant);
+  border-radius: 999px;
+  padding: 4px;
+  width: fit-content;
+  margin: 0 0 30px;
+}
+.spraak button {
+  border: 0;
+  background: transparent;
+  color: var(--svak);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.spraak button[aria-pressed="true"] { background: #263138; color: var(--tekst); }
+
+footer {
+  margin-top: 56px;
+  padding-top: 22px;
+  border-top: 1px solid var(--kant);
+  color: var(--svak);
+  font-size: 14px;
+}
+
+[lang]:not([lang="x"]) { display: none; }
+body.no [lang="no"] { display: revert; }
+body.en [lang="en"] { display: revert; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 28px; }
+  body { font-size: 16px; }
+}
+</style>
+</head>
+<body class="no">
+<main>
+
+<header>
+  <p class="merke">RiseUp</p>
+  <h1 lang="no">Støtte</h1>
+  <h1 lang="en">Support</h1>
+  <p class="datert" lang="no">Vekkerklokka uten av-knapp</p>
+  <p class="datert" lang="en">The alarm clock with no off button</p>
+</header>
+
+<div class="spraak">
+  <button type="button" data-spraak="no" aria-pressed="true">NO</button>
+  <button type="button" data-spraak="en" aria-pressed="false">EN</button>
+</div>
+
+<!-- ============================== NORSK ============================== -->
+<div lang="no">
+
+<div class="boks">
+  <p>Står du fast, skriv til <a href="mailto:riseup.supportmail@gmail.com">riseup.supportmail@gmail.com</a>. Du får svar innen to virkedager.</p>
+</div>
+
+<h2>Alarmen ringte ikke</h2>
+
+<p>Sjekk dette, i denne rekkefølgen:</p>
+
+<ul>
+  <li>Åpne iOS-innstillinger, finn RiseUp, og se at <strong>Alarmer</strong> er slått på. Uten den tillatelsen kan appen ikke lage alarmer i det hele tatt.</li>
+  <li>Se at dagen faktisk er slått på i ukeplanen. Du kan sette et klokkeslett på en dag som er av, og da ringer det ikke.</li>
+  <li>Se at du ikke allerede har fullført dagen. RiseUp ringer én gang per dag.</li>
+  <li>Hadde telefonen strøm, og var den på?</li>
+</ul>
+
+<h2>Lyden var for svak etter at jeg skjøv bort alarmen</h2>
+
+<p>Selve alarmen følger ringevolumet og går uansett. Lyden som holder på etterpå, helt til du har tatt bildet, følger medievolumet. Står det lavt, blir den delen svak. Trykk volum opp på siden av telefonen før du legger deg.</p>
+
+<h2>Bildet blir avvist selv om gjenstanden er der</h2>
+
+<p>Gå nærmere, få hele gjenstanden inn i bildet, og skru på lyset. En kunstig intelligens som ser i et mørkt rom tar like ofte feil som du ville gjort.</p>
+
+<p>Blir den ved å avvise, kan du skru av gjenstander du sjelden finner, under Innstillinger. Det er ikke juks, det er å fortelle appen hva du faktisk har hjemme.</p>
+
+<h2>Jeg mistet streaken da jeg byttet telefon</h2>
+
+<p>RiseUp har ingen innlogging, og kontoen din finnes bare på telefonen. Installerer du på nytt, eller bytter telefon, starter streaken på null. Vi vet at det svir, og innlogging med Apple står på lista.</p>
+
+<h2>Abonnementet</h2>
+
+<p>Du sier opp i iOS: Innstillinger, trykk på navnet ditt øverst, så Abonnementer. Tilgangen varer ut perioden du har betalt for.</p>
+
+<p>Har du betalt på en annen telefon, trykk <strong>Gjenopprett kjøp</strong> nederst på kjøpsskjermen.</p>
+
+<p>Refusjon går gjennom Apple på <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. Vi kan ikke refundere selv.</p>
+
+<h2>Appen krever iOS 26.1</h2>
+
+<p>Det stemmer, og det kan ikke senkes. RiseUp bruker Apples AlarmKit, som er det som gjør at alarmen ringer gjennom stille modus og Fokus og ligger på låseskjermen som Klokke-appen. AlarmKit finnes ikke i eldre iOS.</p>
+
+</div>
+
+<!-- ============================== ENGLISH ============================ -->
+<div lang="en">
+
+<div class="boks">
+  <p>Stuck? Write to <a href="mailto:riseup.supportmail@gmail.com">riseup.supportmail@gmail.com</a>. You will hear back within two working days.</p>
+</div>
+
+<h2>The alarm did not ring</h2>
+
+<p>Check these, in this order:</p>
+
+<ul>
+  <li>Open iOS Settings, find RiseUp, and check that <strong>Alarms</strong> is on. Without that permission the app cannot create alarms at all.</li>
+  <li>Check that the day is actually switched on in the weekly plan. You can set a time on a day that is off, and then nothing rings.</li>
+  <li>Check that you have not already completed the day. RiseUp rings once per day.</li>
+  <li>Did the phone have power, and was it on?</li>
+</ul>
+
+<h2>The sound was too quiet after I dismissed the alarm</h2>
+
+<p>The alarm itself follows the ringer volume and sounds regardless. The sound that keeps going afterwards, until you have taken the photo, follows the media volume. If that is low, this part is weak. Press volume up on the side of your phone before bed.</p>
+
+<h2>The photo is rejected even though the object is there</h2>
+
+<p>Get closer, fit the whole object in the frame, and turn on the light. An artificial intelligence looking into a dark room gets it wrong about as often as you would.</p>
+
+<p>If it keeps rejecting, you can switch off objects you rarely find, under Settings. That is not cheating, it is telling the app what you actually have at home.</p>
+
+<h2>I lost my streak when I changed phones</h2>
+
+<p>RiseUp has no sign-in, and your account exists only on the phone. If you reinstall, or switch phones, the streak starts at zero. We know that stings, and Sign in with Apple is on the list.</p>
+
+<h2>The subscription</h2>
+
+<p>You cancel in iOS: Settings, tap your name at the top, then Subscriptions. Access lasts until the end of the period you paid for.</p>
+
+<p>If you paid on another phone, tap <strong>Restore purchase</strong> at the bottom of the purchase screen.</p>
+
+<p>Refunds go through Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. We cannot refund ourselves.</p>
+
+<h2>The app requires iOS 26.1</h2>
+
+<p>That is correct, and it cannot be lowered. RiseUp uses Apple's AlarmKit, which is what lets the alarm ring through Silent mode and Focus and sit on the lock screen the way the Clock app does. AlarmKit does not exist in older iOS versions.</p>
+
+</div>
+
+<footer>
+  <p lang="no"><a href="personvern.html">Personvernerklæring</a> · <a href="vilkar.html">Vilkår for bruk</a></p>
+  <p lang="en"><a href="personvern.html">Privacy Policy</a> · <a href="vilkar.html">Terms of Use</a></p>
+</footer>
+
+</main>
+
+<script>
+document.querySelectorAll('.spraak button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var s = b.dataset.spraak;
+    document.body.className = s;
+    document.documentElement.lang = s;
+    document.querySelectorAll('.spraak button').forEach(function (x) {
+      x.setAttribute('aria-pressed', String(x === b));
+    });
+  });
+});
+if (!navigator.language || navigator.language.slice(0, 2) !== 'no') {
+  document.querySelector('.spraak button[data-spraak="en"]').click();
+}
+</script>
+
+</body>
+</html>
