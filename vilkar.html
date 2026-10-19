@@ -143,9 +143,15 @@ footer {
   font-size: 14px;
 }
 
-[lang]:not([lang="x"]) { display: none; }
-body.no [lang="no"] { display: revert; }
-body.en [lang="en"] { display: revert; }
+/* Språkvalget skjuler det andre språket.
+ *
+ * Reglene må stå på `main [lang]` og ikke bare `[lang]`. Første utgave gjorde
+ * det siste, og traff da også `<html lang="no">`, som er roten til hele
+ * dokumentet. Resultatet var en helt blank side: alt var teknisk sett der,
+ * og ingenting ble tegnet. */
+main [lang]:not([lang="x"]) { display: none; }
+body.no main [lang="no"] { display: revert; }
+body.en main [lang="en"] { display: revert; }
 
 @media (max-width: 520px) {
   h1 { font-size: 28px; }
